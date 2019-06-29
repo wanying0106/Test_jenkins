@@ -6,8 +6,6 @@ sys.path.append("./ models")
 sys.path.append("./ page_obj")
 from models.myunit import *
 from models.function import *
-<<<<<<< HEAD
-=======
 from page_obj.loginPage import login, forgetPassword
 
 class forgetPasswordTest(MyTest):
@@ -20,4 +18,3 @@ class forgetPasswordTest(MyTest):
 
 if __name__ == '__main__':
 	unittest.main()
->>>>>>> 0629 pass

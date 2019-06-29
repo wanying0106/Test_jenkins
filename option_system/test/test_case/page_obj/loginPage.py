@@ -94,10 +94,7 @@ class forgetPassword(Page):
 		self.forget_newPassword(newpassword)
 		self.newPassword_sure(snewpassword)
 		self.forget_submit()
-<<<<<<< HEAD
-=======
 		sleep(2)
->>>>>>> 0629 pass
 
 
 
