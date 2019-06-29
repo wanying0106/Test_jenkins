@@ -36,7 +36,11 @@ class grantProcessTest(MyTest):
 		sleep(2)
 
 		#授予新建员工期权/RSU
+<<<<<<< HEAD
 		plan(self.driver).user_grant(member = "测试1", matureType = "time", number = "1000")		
+=======
+		plan(self.driver).user_grant(member = "测试", matureType = "time", number = "1000")		
+>>>>>>> 0629 pass
 		sleep(2)
 
 

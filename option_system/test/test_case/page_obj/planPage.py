@@ -15,6 +15,7 @@ class plan(Page):
 	newPlan_type_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[2]/div/div/div/input")
 	newPlan_typeChose_option_loc = (By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]/span")
 	newPlan_typeChose_rsu_loc = (By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]/span")
+<<<<<<< HEAD
 	newPlan_ExercisePrice_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[3]/div/div/div/input")
 	newPlan_ExercisePrice_need_loc = (By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[1]/span")
 	newPlan_ExercisePrice_no_loc = (By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[2]/span")
@@ -29,12 +30,33 @@ class plan(Page):
 	typeChoose_null_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[2]/div/div/div/input")
 	priceChoose_null_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[3]/div/div/div/input")
 	newPlan_close_loc = (By.XPATH, "//*[@id='block']/div/div/div[1]/button/i")
+=======
+#	newPlan_ExercisePrice_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[3]/div/div/div/input")
+#	newPlan_ExercisePrice_need_loc = (By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[1]/span")
+#	newPlan_ExercisePrice_no_loc = (By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[2]/span")
+	newPlan_planNumber_loc = (By.XPATH, "//input[@placeholder='请输入计划总股数']")
+	newPlan_complete_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[5]/button/span")
+	newPlan_success_loc = (By.XPATH, "//*[@id='app']/div/div/div/div/div[1]/div[1]/div/div/div/div[2]")
+	plan_edit_loc = (By.XPATH, "//*[contains(text(),'编辑')]")
+	plan_editPlan_loc = (By.XPATH, "//li[text()='编辑计划']")
+	plan_deletePlan_loc = (By.XPATH, "//li[text()='删除计划']")
+	plan_deleteSure_loc = (By.XPATH, "//*[contains(text(),'确定')]")
+	error_hint_loc = (By.XPATH, "//div[@class='tipMessage']")
+	typeChoose_null_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[2]/div/div/div/input")
+	priceChoose_null_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[3]/div/div/div/input")
+	newPlan_close_loc = (By.XPATH, "//*[@id='block']/div/div/div[1]/button/i")
+	default_plan_loc = (By.XPATH, "//*[@id='app']/div/div/div/div/div[1]/div[1]/div/div/div/div[2]")
+>>>>>>> 0629 pass
 
 	#期权/RSU
 	grant_button_loc = (By.XPATH, "//*[@id='app']/div/div/div/div/div[2]/div[1]/button/span")	
 	grant_member_loc = (By.XPATH, "//*[@placeholder='请选择授予员工']")	
+<<<<<<< HEAD
 	grant_member_choose_loc = (By.XPATH, "//span[text()='测试1']")	
 #	/html/body/div[5]/div[1]/div[1]/ul/li[31]
+=======
+	grant_member_choose_loc = (By.XPATH, "//li/span[text()='测试']")
+>>>>>>> 0629 pass
 	grant_time_loc = (By.XPATH, "//*[@placeholder='RSU授予日期']")	
 	grant_time_choose_loc = (By.XPATH, "//*[@class='available today']")	
 	grant_effect_time_loc = (By.XPATH, "//*[@placeholder='RSU计算开始日期']")	
@@ -49,6 +71,10 @@ class plan(Page):
 	grant_complete_loc = (By.XPATH, "//*[@id='block']/div/div/div[2]/div/form/div[2]/div[2]/button[2]/span")	
 	grant_error_loc = (By.XPATH, "//*[@class='tipMessage']")	
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0629 pass
 	#定义执行操作
 	def plan_newPlan(self):
 		self.find_element(*self.plan_newPlan_loc).click()
@@ -65,6 +91,7 @@ class plan(Page):
 		else:
 			self.find_element(*self.typeChoose_null_loc).click()
 	
+<<<<<<< HEAD
 	def newPlan_ExercisePrice(self, ExercisePriceType):
 		self.find_element(*self.newPlan_ExercisePrice_loc).click()
 		if ExercisePriceType == "need":
@@ -74,6 +101,8 @@ class plan(Page):
 		else:
 			self.find_element(*self.priceChoose_null_loc).click()
 
+=======
+>>>>>>> 0629 pass
 	def newPlan_number(self, planNumber):
 		self.find_element(*self.newPlan_planNumber_loc).send_keys(planNumber)
 		
@@ -85,6 +114,10 @@ class plan(Page):
 	
 	def plan_edit(self, editType):
 		self.find_element(*self.plan_edit_loc).click()
+<<<<<<< HEAD
+=======
+		sleep(2)
+>>>>>>> 0629 pass
 		if editType == "edit":
 			self.find_element(*self.plan_editPlan_loc).click()
 		elif editType == "delete":
@@ -100,17 +133,35 @@ class plan(Page):
 	def grant_click(self):
 		self.find_element(*self.grant_button_loc).click()
 
+<<<<<<< HEAD
 	def grant_member(self, member):
 		self.find_element(*self.grant_member_loc).send_keys(member)
 		sleep(1)
+=======
+	def default_plan_name(self):
+		name = self.find_element(*self.default_plan_loc).text
+		return name
+
+	def grant_member(self, member):
+		self.find_element(*self.grant_member_loc).send_keys(member)
+		sleep(3)
+>>>>>>> 0629 pass
 		self.find_element(*self.grant_member_choose_loc).click()
 
 	def grant_time(self):
 		self.find_element(*self.grant_time_loc).click()
+<<<<<<< HEAD
+=======
+		sleep(1)
+>>>>>>> 0629 pass
 		self.find_element(*self.grant_time_choose_loc).click()
 
 	def effect_time(self):
 		self.find_element(*self.grant_effect_time_loc).click()
+<<<<<<< HEAD
+=======
+		sleep(1)
+>>>>>>> 0629 pass
 		self.find_element(*self.effect_time_choose_loc).click()
 
 	def grant_matureType(self, matureType):
@@ -139,12 +190,19 @@ class plan(Page):
 		self.find_element(*self.grant_error_loc).text
 		
 
+<<<<<<< HEAD
 	def user_newPlan(self, planName = "planName", planType = "planType", ExercisePriceType = "ExercisePriceType", planNumber = "planNumber"):
+=======
+	def user_newPlan(self, planName = "planName", planType = "planType", planNumber = "planNumber"):
+>>>>>>> 0629 pass
 		self.plan_newPlan()
 		self.newPlan_name(planName)
 		self.newPlan_type(planType)
 		sleep(3)
+<<<<<<< HEAD
 		self.newPlan_ExercisePrice(ExercisePriceType)
+=======
+>>>>>>> 0629 pass
 		self.newPlan_number(planNumber)
 		self.newPlan_complete()
 		sleep(2)
